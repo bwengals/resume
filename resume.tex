@@ -1,0 +1,98 @@
+\documentclass[11pt,a4paper,sans]{moderncv}
+\moderncvtheme[burgundy]{banking}
+\usepackage{enumitem}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=.85in, scale=0.8]{geometry}
+\recomputelengths
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{tabularx}
+
+
+\AfterPreamble{
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+}
+
+%pretty C++
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize ++}}
+
+%pretty C#
+\newcommand{\CS}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\#}}
+
+\newcommand{\bitem}{\begin{samepage}\begin{itemize}[leftmargin=*, labelindent=8pt, itemsep=-1pt]}
+\newcommand{\eitem}{\end{itemize}\end{samepage}}
+
+\newcommand{\entry}[6]
+{\cventry{#1}{#2}{#3}{#4}{#5}{
+    \bitem 
+    #6
+    \eitem
+    }
+}
+
+\newcommand{\itemc}[5]
+{\cventry{#4}{#1}{#2}{#3}{}{#5}
+}
+
+
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+
+% personal data
+\firstname{Bill}
+\familyname{Engels}
+%\address{1900 NE 68th St}{98115 Seattle, WA}
+\email{w.j.engels@gmail.com}
+\phone{503-740-7435}
+\homepage{github.com/bwengals}
+ 
+
+\begin{document}
+\maketitle
+\vspace*{-5mm}
+\section{Relevant Experience}
+    \entry{10/2014 -- 8/2016}{Member of Technical Staff}{Open Data Group}{River Forest, IL}{}{
+		\item[--] Worked on an assortment of behavioral models for computer network traffic.  Developed and implemented a
+		set of Hadoop and Spark jobs (aggregations, regressions, clustering) that searched for anomalous behavior in terabyte-scale data.
+        \item[--] Created suite of dynamic visualizations of live data streams (D3.js) and static daily reports summarizing analytics (\LaTeX, HTML, Matplotlib).
+        \item[--] Helped industrial data science client productionalize their machine learning models (e.g. gradient boosted trees, logistic regressions).
+		\item[--] Software development for the Hadrian analytics engine,
+		including the prediction methods of common machine learning models such
+		as SVMs, GLMs, Naive Bayes and basic Neural Nets, exporter for objects produced by R's \textit{gbm} package, also the library of probability distributions, CDFs, and QFs and associated unit-tests and documentation.
+    }
+    \entry{2012 -- 6/2016}{Guest member of Caltech CaRT group, University of Oregon}{LIGO Scientific Collaboration}{}{}{
+	  \item[--] Bayesian approach parameter estimation on uncertain supernova signals buried in noisy LIGO detector data.
+		  Publication in preparation. 
+	  \item[--] Author on \href{http://journals.aps.org/prl/abstract/10.1103/PhysRevLett.116.061102}{first gravitational wave detection paper}, Phys. Rev. Lett. 2016.
+      \item[--] \href{https://arxiv.org/abs/1406.1164}{First author publication, Phys. Rev. D. 2014.} A multivariate multiple regression analysis of complex-valued simulation data.
+	  \item [--] Presentations: \href{http://ccom.ucsd.edu/~pcgm31/}{PCGM31, March 2015}, Caltech Supernova group, July 2014
+		}
+\closesection{}
+
+\section{Open Source Contributions}
+    \entry{}{Probabilstic Programming}{\href{https://github.com/pymc-devs/pymc3}{PyMC3}}{}{}{
+        \item[--] Contributor, Gaussian Process covariance functions
+    }
+
+    \entry{}{High performance histogram-style data aggregations in distributed environments}{\href{https://github.com/histogrammar/histogrammar-python}{Histogrammar (Python)}}{}{}{
+        \item[--] Matplotlib built-in plotting methods.
+    }
+\closesection{}
+
+\section{Skills}
+
+\cvitem{Programming}{Python, R, Scala, Matlab}
+\cvitem{Statistical}{EDA, Regression Analysis, clustering, Bayesian modeling, algorithm implementation}
+\cvitem{Technology}{Git, SQL, AWS, Spark, Hadoop, D3.js, Linux}
+\closesection{}
+
+\section{Education} 
+    \cventry{2013}{Physics}{University of Oregon}{B.S.}{}{}
+%    \cventry{starting 9/2017}{MS Statistics}{Portland State University}{}{}{}
+\end{document}
